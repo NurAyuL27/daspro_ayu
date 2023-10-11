@@ -23,7 +23,11 @@ public class DoWhileCuti21 {
                     System.out.println("Sisa jatah cuti: " + jatahCuti);
                 } else {
                     System.out.println("Sisa jatah cuti Anda tidak mencukupi");
+                    System.out.print("Apakah Anda ingin mencoba lagi (y/t) ? ");
+                    konfirmasi = input21.next();
+                    if (konfirmasi.equalsIgnoreCase("t"))  {
                     break;
+                    }
                 }
             }
         } while (jatahCuti > 0);
