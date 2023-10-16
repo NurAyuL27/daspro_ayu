@@ -26,7 +26,7 @@ public class DoWhileCuti21 {
                     System.out.print("Apakah Anda ingin mencoba lagi (y/t) ? ");
                     konfirmasi = input21.next();
                     if (konfirmasi.equalsIgnoreCase("t"))  {
-                    break;
+                        break;
                     }
                 }
             }
