@@ -8,7 +8,7 @@ public class BubbleSearchingExample21 {
         int temp = 0;
 
         for (int i=0; i < intData.length; i++) { 
-            for (int j=1; j < intData.length-1; j++) { 
+            for (int j=1; j < intData.length-i; j++) { 
                 if (intData[j-1] > intData[j]){
 
                         temp = intData[j]; 
