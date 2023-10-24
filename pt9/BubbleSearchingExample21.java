@@ -1,7 +1,7 @@
 package pt9;
 import java.util.Scanner;
 
-public class BubbleSortExample21 {  
+public class BubbleSearchingExample21 {  
     public static void main(String[] args) {
 
         int[] intData = {34, 18, 87, 72, 32, 54, 43};
