@@ -7,22 +7,58 @@ public class BioskopWithScanner21 {
 
         String nama, next;
         int baris, kolom;
+        int menuOption;
 
         while (true) {
-            System.out.print("Masukkan nama: "); 
-            nama= sc.nextLine(); 
-            System.out.print("Masukkan baris: "); 
-            baris = sc.nextInt(); 
-            System.out.print("Masukkan kolom: "); 
-            kolom = sc.nextInt();
+            System.out.println("Menu:");
+            System.out.println("1. Input data penonton");
+            System.out.println("2. Tampilkan daftar penonton");
+            System.out.println("3. Exit");
+            System.out.print("Masukkan pilihan: ");
+            menuOption = sc.nextInt();
             sc.nextLine();
-            
-            penonton [baris-1][kolom-1] = nama;
-            
-            System.out.print("Input penonton lainnya? (y/n): "); 
-            next = sc.nextLine();
-            if (next.equalsIgnoreCase("n")) { 
-                break;
+
+            switch (menuOption) {
+                case 1:
+                    System.out.print("Masukkan nama: "); 
+                    nama= sc.nextLine(); 
+                    System.out.print("Masukkan baris: "); 
+                    baris = sc.nextInt(); 
+                    System.out.print("Masukkan kolom: "); 
+                    kolom = sc.nextInt();
+                    sc.nextLine();
+                    
+                    if (baris < 1 || baris > 4 || kolom < 1 || kolom > 2) {
+                        System.out.println("Nomor baris/kolom kursi tidak tersedia. Harap masukkan nomor yang benar");
+                        break;
+                    }
+                    
+                    if (penonton [baris-1][kolom-1] != null) {
+                        System.out.println("Kursi sudah ditempati oleh " + penonton[baris - 1][kolom - 1]);
+                        System.out.println("Silakan pilih kursi lain.");
+                        break;
+                    }
+                    
+                    penonton [baris-1][kolom-1] = nama;
+                    System.out.println("Data penonton berhasil dimasukkan.");
+                    
+                    break;
+                case 2:
+                    System.out.println("Daftar penonton:");
+                    for (int i = 0; i < penonton.length; i++) {
+                        for (int j = 0; j < penonton[i].length; j++) {
+                            if (penonton[i][j] != null) {
+                                System.out.printf("%d-%d: %s\n", i+1, j+1, penonton[i][j]);
+                            } else {
+                                System.out.printf("%d-%d: ***\n", i + 1, j + 1);
+                            }
+                        }
+                    }
+                    break;
+                case 3:
+                    return;
+                default:
+                    System.out.println("Pilihan tidak valid.");
             }
         }
     }
