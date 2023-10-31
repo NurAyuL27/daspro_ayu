@@ -11,10 +11,11 @@ public class Bioskop21 {
         penonton [2] [0] = "Eka";
         penonton [2] [1] = "Farhan";
         penonton [3] [0] = "Gisel";
+        penonton [3] [1] = "Hana";
 
-        System.out.println(penonton.length);
-            for (int i = 0; i < penonton.length; i++) {
-                System.out.println("Panjang baris ke-" + (i + 1) + ": " + penonton[i].length);
+        System.out.println(penonton.length); 
+            for (String[] barisPenonton : penonton) {
+                System.out.println("Panjang baris ke: " + barisPenonton.length);
         }
     }
 }
