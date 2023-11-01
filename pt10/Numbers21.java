@@ -1,8 +1,7 @@
 package pt10;
-import java.util.Scanner;
+import java.util.Arrays;
 public class Numbers21 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
         int[][] myNumbers = new int[3][5];       
         myNumbers[0] = new int[5];
@@ -14,3 +13,5 @@ public class Numbers21 {
         }
     }
 }
+
+
