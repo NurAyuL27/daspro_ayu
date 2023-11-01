@@ -28,21 +28,19 @@ public class BioskopWithScanner21 {
                     kolom = sc.nextInt();
                     sc.nextLine();
                     
-                    if (baris < 1 || baris > 4 || kolom < 1 || kolom > 2) {
-                        System.out.println("Nomor baris/kolom kursi tidak tersedia. Harap masukkan nomor yang benar");
-                        break;
+                    if (baris >= 1 && baris <= penonton.length && kolom >= 1 && kolom <= penonton[0].length) {
+                        if (penonton[baris - 1][kolom - 1] == null) {
+                            penonton[baris - 1][kolom - 1] = nama;
+                            System.out.println("Data penonton berhasil dimasukkan.");
+                        } else {
+                            System.out.println("Kursi sudah ditempati oleh " + penonton[baris - 1][kolom - 1]);
+                            System.out.println("Silakan pilih kursi lain.");
+                        }
+                    } else {
+                        System.out.println("Nomor baris/kolom kursi tidak tersedia. ");
                     }
-                    
-                    if (penonton [baris-1][kolom-1] != null) {
-                        System.out.println("Kursi sudah ditempati oleh " + penonton[baris - 1][kolom - 1]);
-                        System.out.println("Silakan pilih kursi lain.");
-                        break;
-                    }
-                    
-                    penonton [baris-1][kolom-1] = nama;
-                    System.out.println("Data penonton berhasil dimasukkan.");
-                    
                     break;
+    
                 case 2:
                     System.out.println("Daftar penonton:");
                     for (int i = 0; i < penonton.length; i++) {
