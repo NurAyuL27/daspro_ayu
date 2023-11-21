@@ -8,4 +8,3 @@ public class TerimaKasih_21 {
         UcapanTerimakasih();
     }
 }
-
