@@ -19,18 +19,5 @@ public class Percobaan621 {
         vol=p*l*t;
         System.out.println("Volume balok adalah "+vol);
 
-    static int hitungLuas (int pjg, int lb) { 
-        int Luas=pjg*lb; 
-        return Luas;
-    }
-    static int hitungVolume (int tinggi, int a, int b) { 
-        int volume= hitungLuas (a, b) *tinggi;
-        return volume;
-    }
-        
-        L=hitungLuas (p,l);
-        System.out.println("Luas Persegs Panjang adalah "+L);
-        vol=hitungVolume (t,p,l);
-        System.out.println("Volume Balok adalah "+vol);
     }
 }
